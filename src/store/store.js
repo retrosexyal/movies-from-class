@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
     movies: moviesReducer,
     toDo: setTodoReducer,
     video: videosReducer,
-    favorit: favoriteReducer,
+    favorite: favoriteReducer,
 });
 
 export const store = createStore(

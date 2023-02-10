@@ -7,7 +7,7 @@ export const actionTypes = {
 export const actionFavorite = {
 
     addMovies: (payload) => ({ type: actionTypes.ADD_MOVIES, payload }),
-    deleteMovies: (id) => ({ type: actionTypes.DELETE_MOVIES, id }),
+    deleteMovies: (payload) => ({ type: actionTypes.DELETE_MOVIES, payload }),
     deleteAll: (payload) => ({ type: actionTypes.DELETE_ALL, payload }),
 
 }

@@ -10,11 +10,12 @@ import "./Home.css"
 export const Home = () => {
   const dispatch = useDispatch();
   const { movies, loading } = useSelector(state => state.movies)
+  const { favorite } = useSelector(state => state.favorite)
   const [page, setPage] = useState(1)
 
    const handleAdd = (id) => () =>{
 /* console.log(movies) */
-console.log()
+console.log(favorite)
      dispatch(actionFavorite.addMovies(movies.find((i)=>i.id === id)))
    }
  
@@ -36,7 +37,7 @@ console.log()
       <Slideshow />
       <div className="main-cont">{movies.map(e => {
         return (
-          <Card e={e} key={e.id} onClick={handleAdd(e.id)} />
+          <Card e={e} key={e.id} onClick={handleAdd(e.id)} text={"add"} />
         )
       })}
 
