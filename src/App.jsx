@@ -6,7 +6,8 @@ import { Header } from './components/Header/Header';
 import { ToDo } from './components/ToDo/ToDo';
 import { Route, Routes } from 'react-router-dom';
 import { LinkedImg } from './components/LinkedImg/LinkedImg';
-import { SwiperComp } from './components/Swiper/Swiper';
+import Favorit from './pages/Favorit/Favorit';
+/* import { SwiperComp } from './components/Swiper/Swiper.tsx'; */
 
 function App() {
   const dispatch = useDispatch()
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/linked/:id" element={<LinkedImg />} />
-        <Route path="/test" element={<SwiperComp />} />
+        <Route path="/favorit" element={<Favorit />} />
+        {/* <Route path="/test" element={<SwiperComp />} /> */}
       </Routes>  
         <ToDo />
 

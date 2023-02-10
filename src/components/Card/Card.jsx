@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./Card.css"
 
-export const Card = ({e}) => {
+export const Card = ({e, onClick}) => {
     return (
-        <div key={e.id}>
+        <div key={e.id} className="card">
             <p>title:{e.title}</p>
             <p>rating: {e.vote_average}</p>
             <p>data: {e.release_date}</p>
             <Link to={`linked/:${e.id}`}>
-                <img src={`https://image.tmdb.org/t/p/w500${e.poster_path}`} alt={e.poster_path} />
+                <img width="300" src={`https://image.tmdb.org/t/p/w500${e.poster_path}`} alt={e.poster_path} />
             </Link>
+            <button onClick={onClick}>add to favorit</button>
         </div>
     )
 }
